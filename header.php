@@ -19,7 +19,7 @@
       <style amp-custom>@import url('<?= get_template_directory_uri() ?>/css/main.min.css');</style><noscript>
       <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <?php }else{ ?>
-      <link rel="stylesheet" media="screen" type="text/css" href="<?= get_template_directory_uri() ?>/css/main.min.css"/>
+      <link rel="stylesheet" media="screen" type="text/css" href="<?= get_template_directory_uri() ?>/css/main.min.css?ver=1.2.0"/>
     <?php } ?>
     
     <script type="application/ld+json">
