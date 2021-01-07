@@ -1,0 +1,95 @@
+.feature-trand {
+  padding: 60px 0;
+}
+.featured {
+  .f-h {
+    font-size: 24px;
+    font-weight: bold;
+    color: scale-color($black, $lightness: +15%);
+  }
+  .f-pst {
+    .f-pst-title {
+      font-size: 18px;
+      font-weight: 500;
+      color: scale-color($black, $lightness: +15%);
+      margin: 1rem 0;
+    }
+    .f-pst-content, .f-pst-meta, .f-pst-footer {
+      font-size: 14px;
+      font-weight: normal;
+      color: scale-color($black, $lightness: +50%);
+      margin-top: 0;
+    }
+    .f-pst-meta {
+      margin-bottom: 0.2rem;
+    }
+    .f-pst-meta, .f-pst-footer {
+      font-size: 12px;
+      .f-pst-author, .f-pst-category {
+        font-size: 13px;
+        font-weight: 500;
+        color: scale-color($black, $lightness: +50%);
+      }
+    }
+    .btn-outline {
+      margin-bottom: 1rem;
+    }
+    figure {
+      img, amp-img{
+        height: 230px;
+        object-fit: cover;
+      }
+    }
+  }
+  .f-lst {
+    margin: 0 0 1rem;
+    .f-lst-box {
+      display: flex;
+      margin-bottom: 2rem;
+      height: 120px;
+      cursor: pointer;
+      &:hover {
+        box-shadow: 0px 0px 10px 1px scale-color($black, $lightness: +80%);
+        transition: all 0.4s ease;
+      }
+      .f-lst-img {
+        width: 35%;
+        height: auto;
+        img, amp-img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .f-lst-content {
+        width: 65%;
+        margin-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        padding: .5rem 0;
+        margin-top: auto;
+        margin-bottom: auto;
+        .f-list-title {
+          font-size: 18px;
+          font-weight: 600;
+          color: scale-color($black, $lightness: +15%);
+          margin: 0 0 0.5rem;
+        }
+        .f-lst-meta, .f-lst-footer {
+          font-size: 13px;
+          font-weight: normal;
+          color: scale-color($black, $lightness: +50%);
+          margin: 0;
+          .f-lst-author, .f-lst-category {
+            font-size: 13px;
+            font-weight: 600;
+            color: scale-color($black, $lightness: +50%);
+            margin: 0;
+          }
+        }
+        .f-lst-meta {
+          margin-bottom: 0.2rem;
+        }
+      }
+    }
+  }
+}

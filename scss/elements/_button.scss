@@ -1,0 +1,71 @@
+button{
+  &:focus {
+    outline: none;
+  }
+}
+.btn {
+  background: $secondary;
+  color: $white;
+  border: none;
+  font-size: 14px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  padding: 14px 24px;
+  transition: all .4s ease;
+  cursor: pointer;
+  &:hover {
+    background-color: scale-color($secondary, $lightness: +10%);
+  }
+}
+.btn-outline {
+  background: $white;
+  color: $secondary;
+  border: 1px solid $secondary;
+  &:hover {
+    background: $secondary;
+    color: $white;
+  }
+}
+.btn-icon {
+  background: transparent;
+  border: none;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  width: 40px;
+  cursor: pointer;
+  color: scale-color($black, $lightness: +40%);
+  fill: scale-color($black, $lightness: +40%);
+  &:hover {
+    background: #eee;
+    transition: width .2s,height .2s,left .2s,top .2s,background .2s;
+    border-radius: 50%;
+  }
+}
+// .btn {
+//   background-color: $cookie;
+//   border: none;
+//   margin: auto 10px;
+//   color: $white;
+//   font-size: 16px;
+//   height: 48px;
+//   left: 16px;
+//   line-height: 16px;
+//   padding: 15px 25px;
+//   text-align: center;
+//   width: auto;
+//   text-decoration: none;
+// }
+// .btn-outline {
+//   font-size: 13px;
+//   font-weight: 500;
+//   color: $primary;
+//   border: 1px solid $primary;
+//   padding: 8px 20px;
+//   display: inline-block;
+//   margin: auto;
+//   text-decoration: none;
+// }

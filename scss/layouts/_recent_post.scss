@@ -1,0 +1,40 @@
+.mrp-box {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid scale-color($black, $lightness: +80%);
+  &:first-of-type {
+    margin-top: 1rem;
+  }
+  &:last-of-type {
+    border-bottom: none;
+  }
+  .mrp-pst {
+    margin-bottom: 1rem;
+    .mrp-tag {
+      font-size: 14px;
+      font-weight: 700;
+      color: scale-color($black, $lightness: +60%);
+      margin: 0;
+      text-transform: uppercase;
+    }
+    .mrp-h {
+      font-size: 18px;
+      font-weight: 600;
+      color: $black;
+      margin: 8px 0;
+    }
+    .mrp-text, p {
+      font-size: 14px;
+      font-weight: normal;
+      color: scale-color($black, $lightness: +40%);
+      margin: 0;
+      margin-bottom: 10px;
+    }
+    .mrp-author, .mrp-category {
+      font-size: 14px;
+      font-weight: 600;
+      color: scale-color($black, $lightness: +40%);
+      margin: 0;
+    }
+  }
+}

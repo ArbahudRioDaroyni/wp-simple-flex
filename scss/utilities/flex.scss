@@ -1,0 +1,32 @@
+.flex {
+  display: flex;
+  display: -ms-flexbox;
+}
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-center {
+  align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+}
+.flex-full-center {
+  justify-content: center;
+  -webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.flex-columns {
+  flex-direction: column !important;
+}
+
+.flex-columns-nowrap {
+  flex-flow: column nowrap;
+}

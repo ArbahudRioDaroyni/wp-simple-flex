@@ -1,0 +1,56 @@
+a {
+  text-decoration: none;
+  color: $black;
+}
+.heading {
+  font-weight: bold;
+  color: $black;
+}
+.h1, h1, .h2, h2, .h3, h3, .h4, h4, .h5, h5, .h6, h6 {
+  line-height: 1.344;
+  letter-spacing: -.05px;
+  font-weight: 400;
+  word-wrap: normal;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.h1, h1 {
+  font-size: 3rem;
+}
+.h2, h2 {
+  font-size: 2.5rem;
+}
+.h3, h3 {
+  font-size: 2rem;
+}
+.h4, h4 {
+  font-size: 1.5rem;
+}
+.h5, h5 {
+  font-size: 1.25rem;
+}
+.h6, h6 {
+  font-size: 1rem;
+}
+
+@media (max-width: $layout-breakpoint-medium) {
+  .h1, h1 {
+    font-size: 2rem;
+  }
+  .h2, h2 {
+    font-size: 1.75rem;
+  }
+  .h3, h3 {
+    font-size: 1.5rem;
+  }
+  .h4, h4 {
+    font-size: 1.25rem;
+  }
+  .h5, h5 {
+    font-size: 1rem;
+  }
+  .h6, h6 {
+    font-size: .75rem;
+  }
+}

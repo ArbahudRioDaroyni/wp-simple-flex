@@ -1,0 +1,203 @@
+.category-headline {
+  align-items: center;
+  .ch-img {
+      background: url('../C19-Impact-hero.gif');
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: cover;
+  }
+  .ch-description {
+    padding: 0 2rem;
+    .ch-name {
+      h4 {
+        line-height: 1.57143;
+        font-size: 14px;
+        letter-spacing: 1.5px;
+        color: scale-color($black, $lightness: +10%);
+        font-weight: 500;
+        text-transform: uppercase;
+        &:hover {
+          color: $secondary;
+          text-decoration: none;
+          transition: all ease .5s;
+        }
+      }
+    }
+    .ch-content {
+      cursor: pointer;
+      padding: 0;
+      .ch-text {
+        display: block;
+        text-decoration: none;
+        color: scale-color($black, $lightness: +10%);
+        h3 {
+          font-size: 26px;
+          line-height: 35px;
+          margin-bottom: 0;
+          margin-top: 20px;
+          font-weight: 500;
+        }
+        p {
+          font-size: 16px;
+          line-height: 26px;
+          margin-bottom: 30px;
+          color: #414141;
+        }
+      }
+      .ch-cta {
+        font-weight: bold;
+        letter-spacing: .02778em;
+        text-transform: uppercase;
+        color: scale-color($black, $lightness: +10%);
+        white-space: nowrap;
+        font-size: 14px;
+        line-height: 1.571;
+        text-decoration: none;
+        transition: all 0.4s ease;
+      }
+      .ch-icon {
+      height: 18px;
+      width: 29px;
+      padding-left: 10px;
+      }
+      &:hover .ch-cta {
+        color: $secondary;
+        text-decoration: none;
+      }
+      &:hover .ch-icon {
+        fill: $secondary;
+        margin-left: 10px;
+        transition: all ease .5s;
+      }
+    }
+  }
+}
+.category-block {
+  padding: 1rem;
+  .cb-name {
+    h4 {
+      line-height: 1.57143;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      color: scale-color($black, $lightness: +10%);
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+    &:hover h4 {
+      color: $secondary;
+      transition: all ease .5s;
+    }
+  }
+  .cb-content {
+    cursor: pointer;
+    &:hover h3 {
+      color: $secondary;
+      transition: all ease .5s;
+    }
+    h3 {
+      line-height: 1.36364;
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: 0;
+      margin: 8px 0 12px;
+    }
+    .img {
+      img, amp-img{
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+      }
+    }
+  }
+}
+.category-story {
+  h2 {
+    font-weight: 500;
+  }
+  a {
+    padding: 2rem 0;
+    border-bottom: 1px solid scale-color($black, $lightness: +85%);
+    text-decoration: none;
+  }
+  .cs-content {
+    h4 {
+      font-size: 14px;
+      font-weight: 600;
+      color: scale-color($black, $lightness: +50%);
+      margin: 0;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    h3 {
+      font-size: 22px;
+      line-height: 1.25;
+      letter-spacing: 0;
+      color: scale-color($black, $lightness: +30%);
+      font-weight: 600;
+      margin: 0;
+    }
+  }
+  .cs-img {
+    figure {
+      img, amp-img{
+        height: 120px;
+        object-fit: cover;
+      }
+    }
+  }
+  .btn {
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .ch-img {
+    padding: 187px 0;
+  }
+  .ch-description {
+    .ch-name {
+      h4 {
+        margin-top: 0;
+      }
+    }
+  }
+  .category-story {
+    padding: 0 3rem;
+    .btn {
+      padding: 1.5rem 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .ch-img {
+    padding: 107px 0;
+  }
+  .ch-description {
+    padding: 1rem;
+    .ch-description {
+      .ch-name {
+        h4 {
+          margin-top: inherit;
+        }
+      }
+    }
+  }
+  .category-story {
+    padding: 0 1rem;
+    .cs-img {
+      figure {
+        margin-top: 1rem;
+        img, amp-img{
+          height: 160px;
+          object-fit: cover;
+        }
+      }
+    }
+    .btn {
+      padding: 1rem 0;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+}

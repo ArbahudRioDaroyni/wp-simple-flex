@@ -1,0 +1,43 @@
+// style start
+@media (max-width: $layout-breakpoint-small) {
+	.mrpm-txt {
+		h3 {
+			font-size: 13px;
+		}
+	}
+	.md-none {
+		display: none;
+	}
+}
+@media (min-width: $layout-breakpoint-small + 1) and (max-width: $layout-breakpoint-medium - 1) {
+	.md-none {
+		display: none;
+	}
+}
+@media (min-width: $layout-breakpoint-large) and (max-width: $layout-breakpoint-extra-large - 1) {
+	.boor-txt {
+		padding: 0px 0;
+		h3 {
+			font-size: 25px;
+		}
+	}
+	.mrp-pst {
+		h3 {
+			font-size: 15px;
+			margin: 0;
+		}
+	}
+	.mrpm-txt {
+		h3 {
+			font-size: 15px;
+		}
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.nav-coll {
+		&:not(.show) {
+			display: none;
+		}
+	}
+}

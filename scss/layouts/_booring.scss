@@ -1,0 +1,31 @@
+.boor-area {
+  .boor-content {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    .boor-h {
+      font-size: 28px;
+      font-weight: 600;
+      color: #282820;
+      margin: 0 0 15px 0;
+    }
+    .boor-text {
+      font-size: 17px;
+      font-weight: normal;
+      color: #747373;
+      margin-bottom: 12px;
+    }
+  
+    .boor-meta, .boor-date {
+      color: scale-color($black, $lightness: +50%);
+      margin: 0;
+    }
+    
+    .boor-author, .boor-category {
+      font-size: 17px;
+      font-weight: 600;
+      color: #747373;
+      margin: 0;
+    }
+  }
+}

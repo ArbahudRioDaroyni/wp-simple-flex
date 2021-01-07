@@ -1,0 +1,53 @@
+.tranding {
+  .trd-h {
+    font-size: 24px;
+    font-weight: bold;
+    color: scale-color($black, $lightness: +15%);
+  }
+  .trd-box {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 1rem 0 1rem;
+    clear: both;
+    cursor: pointer;
+    border-bottom: 1px solid scale-color($black, $lightness: +80%);
+    &:last-of-type {
+      border-bottom: none;
+    }
+    &:hover {
+      background-color: scale-color($secondary, $lightness: +90%);
+      transition: all 0.4s ease;
+    }
+  }
+  .trd-number {
+    flex: 1 1 20%;
+    text-align: center;
+    span{
+      font-size: 25px;
+      color: scale-color($black, $lightness: +65%);
+      font-weight: 600;
+    }
+  }
+  .trd-content {
+    flex: 1 1 80%;
+    margin-left: 12px;
+    .trd-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: scale-color($black, $lightness: +15%);
+      margin: 0 0 0.5rem;
+    }
+    p, time {
+      font-size: 13px;
+      font-weight: normal;
+      color: scale-color($black, $lightness: +50%);
+      margin: 0;
+      span {
+        font-size: 13px;
+        font-weight: 600;
+        color: scale-color($black, $lightness: +50%);
+        margin: 0;
+      }
+    }
+  }
+}

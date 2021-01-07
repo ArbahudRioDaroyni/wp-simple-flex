@@ -1,0 +1,83 @@
+@mixin reset-width () {
+	.row {
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+}
+@mixin full-width($value) {
+  -ms-flex: 0 0 $value;
+  flex: 0 0 $value;
+  max-width: $value;
+  padding-right: 15px;
+  padding-left: 15px;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@include reset-width();
+
+@media (max-width: $layout-breakpoint-small) {
+  @include reset-width();
+  .container {
+		max-width: 540px;
+  }
+}
+@media screen and (min-width: $layout-breakpoint-small + 1) and (max-width: $layout-breakpoint-medium - 1) {
+  @include reset-width();
+  .container {
+    max-width: 540px;
+  }
+}
+@media screen and (min-width: $layout-breakpoint-medium) and (max-width: $layout-breakpoint-large - 1) {
+	.container {
+		max-width: 720px;
+	}
+  @include reset-width();
+}
+@media screen and (min-width: $layout-breakpoint-large) and (max-width: $layout-breakpoint-extra-large - 1) {
+	.container {
+		max-width: 960px;
+	}
+  @include reset-width();
+}
+@media screen and (min-width: $layout-breakpoint-extra-large) {
+	.container {
+		max-width: 1140px;
+	}
+}
+@media screen and (min-width: 1400px) {
+	.container {
+		max-width: 1320px;
+	}
+}
+@media (min-width: $layout-breakpoint-large) {
+  .full-width {
+    -ms-flex: 100%;
+    flex: 100%;
+  }
+  @for $i from 1 through 11 {
+    .full-width-#{$i} {
+      @include full-width( 100% / 12 * ($i) );
+    }
+  }
+}
+@media screen and (min-width: $layout-breakpoint-extra-small) and (max-width: $layout-breakpoint-large - 1) {
+  .full-width {
+    -ms-flex: 100%;
+    flex: 100%;
+  }
+  @for $i from 1 through 11 {
+    .full-width-#{$i} {
+      -ms-flex: 100%;
+		  flex: 100%;
+    }
+  }
+}
