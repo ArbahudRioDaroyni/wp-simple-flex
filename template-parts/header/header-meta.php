@@ -1,6 +1,7 @@
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <?= $ampscript = (isset($_GET['amp'])) ? '<script async src="https://cdn.ampproject.org/v0.js"></script>' : '' ?>
+<?= $ampscript = (isset($_GET['amp'])) ? '<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>' : '' ?>
 <?php // echo $ads = (isset($_GET['amp'])) ? '' : '<script data-ad-client="ca-pub-5419652163962979" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>' ?>
 <meta name="google-site-verification" content="1GS5b8XueaIk5rOTEhD8hwGXIfoZfAtK2KTCJlkJNDY" />
 <?php if (is_home() || is_front_page()){ ?>

@@ -24,7 +24,14 @@
 		</div>
 		<a href="<?= get_home_url() ?>">
 			<figure class="nav-logo m-0">
-				<img class="flex" title="Jejak Cyber" src="https://randdsoftindonesia.com/wp-content/uploads/2019/12/Randd-Soft-300x57.png" alt="Jejak Cyber">
+				<amp-img 
+					class="flex"
+					src="https://randdsoftindonesia.com/wp-content/uploads/2019/12/Randd-Soft-300x57.png"
+					alt="Jejak Cyber"
+					width="900"
+					height="675"
+					layout="responsive">
+				</amp-img>
 			</figure>
 		</a>
 		<div class="navbar-search">
@@ -38,7 +45,7 @@
 		</div>
 		<div class="navbar-search-input flex-center" id="nav-search">
 			<section>
-				<form action="#" method="GET">
+				<form action="#" method="GET" target="_top">
 					<button>
 						<svg xmlns="http://www.w3.org/2000/svg" height="16px" version="1.1" viewBox="-1 0 136 136.21852" width="16px" role="img">
 							<g id="surface1">
