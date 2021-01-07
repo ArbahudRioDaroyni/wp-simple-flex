@@ -16,7 +16,7 @@
 <div class="navbar" id="full">
 	<nav class="navbar-main flex flex-center">
 		<div class="nav-toggler mp-0 flex-full-center">
-			<button class="flex nav-tog-icon btn-icon flex-full-center" onclick="toggleSide()" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="flex nav-tog-icon btn-icon flex-full-center" <?= $b=(isset($_GET['amp']))?'': 'onclick="toggleSide()"' ?> type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<svg height="24" id="h-burger" viewBox="0 0 24 24" width="24" role="img">
 					<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
 				</svg>
@@ -28,7 +28,7 @@
 			</figure>
 		</a>
 		<div class="navbar-search">
-			<button class="flex flex-full-center btn-icon" onclick="toggleSearch(1)">
+			<button class="flex flex-full-center btn-icon" <?= $b=(isset($_GET['amp']))?'': 'onclick="toggleSide(1)"' ?>>
 				<svg xmlns="http://www.w3.org/2000/svg" height="16px" version="1.1" viewBox="-1 0 136 136.21852" width="16px" role="img">
 					<g id="surface1">
 						<path d="M 93.148438 80.832031 C 109.5 57.742188 104.03125 25.769531 80.941406 9.421875 C 57.851562 -6.925781 25.878906 -1.460938 9.53125 21.632812 C -6.816406 44.722656 -1.351562 76.691406 21.742188 93.039062 C 38.222656 104.707031 60.011719 105.605469 77.394531 95.339844 L 115.164062 132.882812 C 119.242188 137.175781 126.027344 137.347656 130.320312 133.269531 C 134.613281 129.195312 134.785156 122.410156 130.710938 118.117188 C 130.582031 117.980469 130.457031 117.855469 130.320312 117.726562 Z M 51.308594 84.332031 C 33.0625 84.335938 18.269531 69.554688 18.257812 51.308594 C 18.253906 33.0625 33.035156 18.269531 51.285156 18.261719 C 69.507812 18.253906 84.292969 33.011719 84.328125 51.234375 C 84.359375 69.484375 69.585938 84.300781 51.332031 84.332031 C 51.324219 84.332031 51.320312 84.332031 51.308594 84.332031 Z M 51.308594 84.332031 " style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" />
@@ -49,7 +49,7 @@
 					<input type="text" name="search" placeholder="Cari sesuatu..">
 				</form>
 			</section>
-			<button onclick="toggleSearch(0)">
+			<button <?= $b=(isset($_GET['amp']))?'': 'onclick="toggleSearch(0)"' ?>>
 				<svg width="22px" height="22px" role="img" id="btn-close" viewBox="0 0 24 24">
 					<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
 					<path d="M0 0h24v24H0z" fill="none"></path>
@@ -60,7 +60,7 @@
 			<ul class="mainmenu-blog g-menu" id="">
 				<li><a href="#" class="active"> Halaman Utama</a></li>
 				<li>
-					<a href="#" onclick="toggleDropBox()" class="dropbtn flex">Pilihan Kategori 
+					<a href="#" <?= $b=(isset($_GET['amp']))?'': 'onclick="toggleDropBox()"' ?> class="dropbtn flex">Pilihan Kategori 
 						<svg id="about" height="24" width="24">
 							<path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path>
 						</svg>
@@ -76,7 +76,7 @@
 				</li>
 				<li class="dk-none" style="border-top: 2px solid #DADCE0;"><a href="#">Press corner</a></li>
 				<li class="dk-none"><a id="close-side" href="#" style="margin: 0 10px;">RSS feed</a></li>
-				<section onclick="toggleSide(1)" id="close-side"></section>
+				<section <?= $b=(isset($_GET['amp']))?'': 'onclick="toggleSide(1)"' ?> id="close-side"></section>
 			</ul>
 		</div>
 		<div class="nav-other flex-full-center md-none">
@@ -96,7 +96,7 @@
 		<div class="md-none"><a class="btn btn-outline" href="#">Subscribe</a></div>
 	</nav>
 	<div id="drop-box" class="drop-box">
-		<section><a href="#" onclick="toggleDropBox()"><i class="fa fa-angle-left"></i> &nbsp;Back</a></section>
+		<section><a href="#" <?= $b=(isset($_GET['amp']))?'': 'onclick="toggleDropBox()"' ?>><i class="fa fa-angle-left"></i> &nbsp;Back</a></section>
 		<ul class="full-width-3">
 			<li>Aplikasi</li>
 			<li><a href="#">Android</a></li>
@@ -123,7 +123,7 @@
 			<li><a href="#">CoVid-19</a></li>
 		</ul>
 		<!-- <a href="#" class="full-width-12">Lorem ipsum, dolor sit amet consectetur.</a> -->
-		<section onclick="toggleSide(1)" id="close-side"></section>
+		<section <?= $b=(isset($_GET['amp']))?'': 'onclick="toggleSide(1)"' ?> id="close-side"></section>
 	</div>
 </div>
 <!-- header-area end -->
