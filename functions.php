@@ -159,7 +159,7 @@ function filter_amp($content){
 		return preg_replace('/<iframe([^>]+)?>/', '<amp-iframe$1>', $content);
 	}
 }
-add_filter('the_content', 'filter_amo');
+add_filter('the_content', 'filter_amp');
 
 // function get_id_attachment_by_url($url){
 // 	global $wpdb;
