@@ -155,7 +155,7 @@ function get_first_image_in_post() {
 }
 
 function first_paragraph($content){
-	return preg_replace('/<p([^>]+)?>/', '<p$1 class="intro">', $content, 1);
+	return preg_replace('/<p([^>]+)?>/', '<p$1 class="intro">', $content);
 }
 add_filter('the_content', 'first_paragraph');
 
