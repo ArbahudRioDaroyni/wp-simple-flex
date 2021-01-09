@@ -155,7 +155,9 @@ function get_first_image_in_post() {
 }
 
 function filter_amp($content){
-		return preg_replace('/<iframe([^>]+)?>/', '<amp-iframe$1>', $content);
+	// if (isset($_GET['amp'])) {
+		return preg_replace('/<p([^>]+)?>/', '<p$1 class="amp">', $content);
+	// }
 }
 add_filter('the_content', 'first_paragraph');
 
