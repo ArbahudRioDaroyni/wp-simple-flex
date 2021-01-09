@@ -154,10 +154,10 @@ function get_first_image_in_post() {
 	return $first_img;
 }
 
-function filter_amp($content){
-	return preg_replace('/<p([^>]+)?>/', '<p$1 class="intro">', $content);
+function first_paragraph($content){
+	return preg_replace('/<p([^>]+)?>/', '<p$1 class="intro">', $content, 1);
 }
-add_filter('the_content', 'filter_amp');
+add_filter('the_content', 'first_paragraph');
 
 // function get_id_attachment_by_url($url){
 // 	global $wpdb;
