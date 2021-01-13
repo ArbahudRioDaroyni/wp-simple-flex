@@ -156,7 +156,7 @@ function get_first_image_in_post() {
 
 function filter_amp($content){
 	if (isset($_GET['amp'])) {
-		return preg_replace('/<iframe([^>]+)?>(.*?)<\/iframe>/', '<iframe$1 class="inro">$2</iframe>', $content);
+		return preg_replace('/<iframe([^>]+)?>(.*?)<\/iframe>/', '<amp-iframe$1>$2</amp-iframe>', $content);
 	} else {
 		return $content;
 	}
