@@ -25,9 +25,7 @@
 		<a href="<?= get_home_url() ?>">
 			<figure class="nav-logo m-0">
 				<amp-img 
-					class="flex"
 					src="https://bandarcara.com/wp-content/uploads/2020/11/Bandarcara-Logo.png"
-					alt="Bandar Cara"
 					title="Bandar Cara"
 					width="900"
 					height="675"
