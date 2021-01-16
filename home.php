@@ -88,63 +88,6 @@ get_header();
         </div>
       </div>
     </section>
-    
-		<!-- <section class="section-headline mobile section">
-      <div class="headline container">
-        <img src="https://jejakcyber.com/wp-content/uploads/2020/04/image.jpg" />
-        <div class="headline-description flex columns nowrap">
-          <p class="headline-category">Health</p>
-          <h2 class="m-0"><a href="#">Helping public health officials combat COVID-19</a></h2>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae maxime provident similique aut suscipit expedita officiis quas ut itaque, quis quibusdam rem quo veritatis error excepturi. Cumque culpa numquam praesentium.</p>
-          <span class="headline-cta">
-            <a class="flex" href="#" id="headline-cta">
-              Baca Artikel
-              <svg class="headline-cta-icon" role="presentation" for='headline-cta'>
-                <use xlink:href="#mi-arrow-forward">
-                  <svg id="mi-arrow-forward">
-                    <path d="M9 1.5C4.8 1.5 1.5 4.8 1.5 9s3.3 7.5 7.5 7.5 7.5-3.3 7.5-7.5S13.2 1.5 9 1.5zm0 13l-1-1 3.8-3.8H3.5V8.3h8.4L8.1 4.5l.9-1L14.5 9 9 14.5z"></path>
-                  </svg>
-                </use>
-              </svg>
-            </a>
-          </span>
-        </div>
-      </div>
-    </section> -->
-
-		<!-- <section class="section-news mobile">
-      <h2 class="news-title">Berita Terbaru</h2>
-      <div class="headline container">
-        <div class="img-crop" style="height:12rem">
-          <img class="img-is-cropped" src="https://jejakcyber.com/wp-content/uploads/2020/04/image.jpg" />
-        </div>
-        <div class="headline-description flex columns nowrap">
-          <p class="headline-category">Health</p>
-          <h3 class="m-0"><a href="#">Helping public health officials combat COVID-19</a></h3>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae maxime provident similique aut suscipit expedita officiis quas ut itaque.</p>
-          <span class="headline-cta">
-            <a class="flex" href="#" id="headline-cta">
-              Baca Artikel
-              <svg class="headline-cta-icon" role="presentation" for='headline-cta'>
-                <use xlink:href="#mi-arrow-forward">
-                  <svg id="mi-arrow-forward">
-                    <path d="M9 1.5C4.8 1.5 1.5 4.8 1.5 9s3.3 7.5 7.5 7.5 7.5-3.3 7.5-7.5S13.2 1.5 9 1.5zm0 13l-1-1 3.8-3.8H3.5V8.3h8.4L8.1 4.5l.9-1L14.5 9 9 14.5z"></path>
-                  </svg>
-                </use>
-              </svg>
-            </a>
-          </span>
-        </div>
-      </div>
-      <div class="feed container nowrap">
-        <div class="feed-img">
-          <img src="https://jejakcyber.com/wp-content/uploads/2020/04/image.jpg" />
-        </div>
-        <div class="feed-content flex columns nowrap">
-          <h4 class="m-0"><a href="#">Helping public health officials combat COVID-19</a></h4>
-        </div>
-      </div>
-    </section> -->
 
 		</main><!-- .site-main -->
 	</section><!-- .content-area -->

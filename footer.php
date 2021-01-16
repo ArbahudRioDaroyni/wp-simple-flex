@@ -19,7 +19,7 @@
 				<p>Follow Us: </p>
 				<ul class="follow-us-list">
 					<li>
-						<a href="#" class="flex flex-full-center btn-icon">
+						<a href="https://web.facebook.com/bandarcara" class="flex flex-full-center btn-icon">
 							<svg aria-hidden="true" class="icon-social" viewBox="0 0 18 18" height="24" width="24" fill="black">
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-facebook">
 									<svg id="social-facebook" viewBox="0 0 18 18">
@@ -30,7 +30,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="#" class="flex flex-full-center btn-icon">
+						<a href="https://instagram.com/bandarcara" class="flex flex-full-center btn-icon">
 							<svg aria-hidden="true" class="icon-social" viewBox="0 0 18 18" height="24" width="24" fill="black">
 								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-instagram">
 									<svg id="social-instagram" viewBox="0 0 18 18">
@@ -42,19 +42,17 @@
 							</svg>
 						</a>
 					</li>
-					<li><a href="#"><i class="fab fa-youtube"></i></a></li>
-					<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-					<li><a href="#"><i class="fab fa-linkedin"></i></a></li>
 				</ul>
 			</div>
 			<div class="nav-bottom">
 				<!-- <img src="g-img/google-icon-gray.png" alt="image"> -->
 				<ul>
-					<li><a href="#">Privacy Policy</a></li>
-					<li><a href="#">Terms of Service</a></li>
+					<li><a href="<?= get_home_url() ?>/privacy-policy/">Privacy Policy</a></li>
+					<li><a href="<?= get_home_url() ?>/sitemap.xml">Sitemap</a></li>
+					<!-- <li><a href="#">Terms of Service</a></li>
 					<li><a href="#">Disclaimer</a></li>
 					<li><a href="#">Contact Us</a></li>
-					<li><a href="#">About Jejakcyber</a></li>
+					<li><a href="#">About Jejakcyber</a></li> -->
 				</ul>
 				<ul class="help">
 					<li>

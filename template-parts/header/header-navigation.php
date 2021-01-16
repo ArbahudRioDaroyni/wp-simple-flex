@@ -70,20 +70,20 @@
 						</svg>
 					</a>
 				</li>
-				<li class="dropdown2">
+				<!-- <li class="dropdown2">
 					<a href="#" class="">Company news <i class="fa fa-angle-down"></i></a>
 					<div id="" class="dropdown-content2">
 						<a href="#">Google.org</a>
 						<a href="#">Doodle</a>
 						<a href="#">Grow with google</a>
 					</div>
-				</li>
-				<li class="dk-none" style="border-top: 2px solid #DADCE0;"><a href="#">Press corner</a></li>
-				<li class="dk-none"><a id="close-side" href="#" style="margin: 0 10px;">RSS feed</a></li>
+				</li> -->
+				<!-- <li class="dk-none" style="border-top: 2px solid #DADCE0;"><a href="#">Press corner</a></li>
+				<li class="dk-none"><a id="close-side" href="#" style="margin: 0 10px;">RSS feed</a></li> -->
 				<section <?= $b=(isset($_GET['amp']))?'': 'onclick="toggleSide(1)"' ?> id="close-side"></section>
 			</ul>
 		</div>
-		<div class="nav-other flex-full-center md-none">
+		<!-- <div class="nav-other flex-full-center md-none">
 			<button class="dropdown3 flex flex-full-center btn-icon">
 				<span class="dropbtn3 flex">
 					<svg id="mi-more-vert" height="24" viewBox="0 0 24 24" width="24">
@@ -96,35 +96,23 @@
 					</div>
 				</span>
 			</button>
-		</div>
-		<div class="md-none"><a class="btn btn-outline" href="#">Subscribe</a></div>
+		</div> -->
+		<!-- <div class="md-none"><a class="btn btn-outline" href="#">Subscribe</a></div> -->
 	</nav>
 	<div id="drop-box" class="drop-box">
 		<section><a href="#" <?= $b=(isset($_GET['amp']))?'': 'onclick="toggleDropBox()"' ?>><i class="fa fa-angle-left"></i> &nbsp;Back</a></section>
 		<ul class="full-width-3">
-			<li>Aplikasi</li>
-			<li><a href="#">Android</a></li>
-			<li><a href="#">Ios</a></li>
-			<li><a href="#">Windows</a></li>
-			<li><a href="#">Mac</a></li>
-		</ul>
-		<ul class="full-width-3">
-			<li>Gadget</li>
-			<li><a href="#">Smartphone</a></li>
-			<li><a href="#">Tablet</a></li>
-			<li><a href="#">Laptop</a></li>
-			<li><a href="#">Komputer</a></li>
+			<li>Review</li>
+			<li><a href="<?= get_home_url() ?>/game">Game</a></li>
+			<li><a href="<?= get_home_url() ?>/film">Film</a></li>
 		</ul>
 		<ul class="full-width-3">
 			<li>Tips & Trick</li>
-			<!-- <li><a href="#">Yoga</a></li>
-			<li><a href="#">Yanto</a></li>
-			<li><a href="#">Ali</a></li>
-			<li><a href="#">Fian</a></li> -->
+			<li><a href="<?= get_home_url() ?>/tips-trik/tutorial/">Tutorial</a></li>
 		</ul>
 		<ul class="full-width-3">
 			<li>Out of IT</li>
-			<li><a href="#">CoVid-19</a></li>
+			<!-- <li><a href="#">CoVid-19</a></li> -->
 		</ul>
 		<!-- <a href="#" class="full-width-12">Lorem ipsum, dolor sit amet consectetur.</a> -->
 		<section <?= $b=(isset($_GET['amp']))?'': 'onclick="toggleSide(1)"' ?> id="close-side"></section>
