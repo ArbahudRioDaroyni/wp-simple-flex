@@ -39,7 +39,7 @@ get_header();
                         <p class="f-pst-content"><?= get_the_excerpt() ?></p>
                         <p class="f-pst-meta"><span class="f-pst-author"><?= get_the_author(); ?></span> in <span class="f-pst-category"><?= get_the_category()[0]->name ?></span></p>
                         <time class="f-pst-footer" datetime="<?php the_time('Y-m-d H:i'); ?>"><?php the_time('D, d F Y'); ?></time>
-                        <a class="btn btn-outline mt-1" href="#">Tampilkan Selengkapnya</a>
+                        <a class="btn btn-outline mt-1 mb-1" href="#">Tampilkan Selengkapnya</a>
                       </a>
                   <?php endforeach; wp_reset_postdata();?>
                 </div>
@@ -72,16 +72,17 @@ get_header();
               <h2 class="trd-h">Cerita terbaru</h2>
               <hr class="h-line mb-1">
               <?php $posts_array = get_list_posts(4);
+               $i=1;
                 foreach ( $posts_array as $post ) : setup_postdata( $post ); ?>
                   <a href="<?= get_the_permalink() ?>" class="trd-box flex-full-center">
-                    <div class="trd-number"><span>01</span></div>
+                    <div class="trd-number"><span>0<?= $i ?></span></div>
                     <div class="trd-content">
                       <h3 class="trd-title"><?= get_the_title() ?></h3>
                       <p style="margin-bottom: 4px;"><span><?= get_the_author(); ?></span> in <span><?= get_the_category()[0]->name ?></span></p>
                       <time datetime="<?php the_time('Y-m-d H:i'); ?>"><?php the_time('D, d F Y'); ?></time>
                     </div>
                   </a>
-              <?php endforeach; wp_reset_postdata();?>
+              <?php $i++; endforeach; wp_reset_postdata();?>
             </div>
           </div>
         </div>

@@ -24,13 +24,11 @@
 		</div>
 		<a href="<?= get_home_url() ?>">
 			<figure class="nav-logo m-0">
-				<amp-img 
-					src="https://bandarcara.com/wp-content/uploads/2020/11/Bandarcara-Logo.png"
-					title="Bandar Cara"
-					width="900"
-					height="675"
-					layout="responsive">
-				</amp-img>
+				<?php if (isset($_GET['amp'])) { ?>
+					<amp-img src="https://bandarcara.com/wp-content/uploads/2020/11/Bandarcara-Logo.png" height='37' width='103' alt="BandarCara" class="flex"></amp-img>
+				<?php }else{ ?>
+					<img src="<?= get_default_image() ?>" data-src="https://bandarcara.com/wp-content/uploads/2020/11/Bandarcara-Logo.png" data-srcset="https://bandarcara.com/wp-content/uploads/2020/11/Bandarcara-Logo.png 1x, https://bandarcara.com/wp-content/uploads/2020/11/Bandarcara-Logo.png 2x" class="lazy flex" alt="<?= get_the_title() ?>" />
+				<?php } ?>
 			</figure>
 		</a>
 		<div class="navbar-search">
@@ -64,7 +62,7 @@
 		</div>
 		<div class="navbar-menu md-none flex-center" id="topside">
 			<ul class="mainmenu-blog g-menu" id="">
-				<li><a href="#" class="active"> Halaman Utama</a></li>
+				<li><a href="<?php get_home_url() ?> " class="active">Halaman Utama</a></li>
 				<li>
 					<a href="#" <?= $b=(isset($_GET['amp']))?'': 'onclick="toggleDropBox()"' ?> class="dropbtn flex">Pilihan Kategori 
 						<svg id="about" height="24" width="24">
