@@ -23,14 +23,6 @@
 			</h1>
 		</header>
 
-		<figure class="hero-img">
-			<?php if (isset($_GET['amp'])) { ?>
-				<amp-img src="<?= get_first_image_in_post() ?>" height='150' width='300' layout='responsive' alt="<?= get_the_title() ?>"></amp-img>
-			<?php } else { ?>
-				<img src="<?= get_default_image() ?>" data-src="<?= get_first_image_in_post() ?>" data-srcset="<?= get_first_image_in_post() ?> 1x, <?= get_first_image_in_post() ?> 2x" class="lazy" alt="<?= get_the_title() ?>" />
-			<?php } ?>
-		</figure>
-
 		<div class="row p-set">
 
 			<div class="entry-meta description flex flex-columns-nowrap a-info full-width-2 pl-0">
@@ -45,8 +37,6 @@
 				<?php the_content(); ?>
 			</div>
 
-			<?php get_sidebar() ?>
-
 			<footer class="entry-footer flex a-footer">
 				<?php foreach (get_the_tags() as $value) { ?>
 					#<a href="<?= esc_url( get_tag_link( $value ) ) ?>" rel="tag" class="tag"><?= $value->name ?></a>
@@ -56,6 +46,8 @@
 		</div>
 
 	</div><!-- .entry-content -->
+
+	<?php get_template_part( 'template-parts/section/section','related-article' ); ?>
 
 </article><!-- #post-<?php the_ID(); ?> -->
 <?php set_post_view() ?>
