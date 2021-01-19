@@ -131,7 +131,7 @@ function amp_filter($content){
 	];
 	$replacements = [
 		'<amp-img $1 layout="responsive"></amp-img>',
-		'<ampaa-iframe$1 sandbox="allow-scripts allow-same-origin">$2</ampaa-iframe>'
+		'<amp-iframe$1 sandbox="allow-scripts allow-same-origin" resizable layout="responsive">$2</amp-iframe>'
 	];
 
 	$patterns_non_amp = [ '/<img src="(.*?)" srcset="(.*?)" ([^>]+)?>/' ];
