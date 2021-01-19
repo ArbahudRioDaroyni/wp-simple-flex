@@ -36,6 +36,7 @@ function wp_head_custom_structured_data(){
 		{
 			"@context": "http://schema.org/",
 			"@type": "BreadcrumbList",
+			"name": "BreadcrumbList",
 			"itemListElement": [{
 				"@type": "ListItem",
 				"position": "1",
