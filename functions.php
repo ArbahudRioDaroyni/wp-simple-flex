@@ -10,26 +10,6 @@ function wpassist_remove_block_library_css(){
 } 
 add_action( 'wp_enqueue_scripts', 'wpassist_remove_block_library_css' );
 
-// for redirect google amp page
-define( 'AMP_QUERY_VAR', apply_filters( 'amp_query_var', 'amp' ) );
-add_rewrite_endpoint( AMP_QUERY_VAR, EP_PERMALINK | EP_PAGES );
-function prefix_url_rewrite() {
-	if( get_query_var( AMP_QUERY_VAR, false ) !== false ) {
-		if ( is_page() ) {
-      add_filter( 'template_include', function() {
-        return get_template_directory() . '/index-amp.php';
-      });
-		}
-		if ( is_single() ) {
-      add_filter( 'template_include', function() {
-        return get_template_directory() . '/single-amp.php';
-      });
-		}
-	}
-}
-add_action( 'template_redirect', 'prefix_url_rewrite' );
-// /.for redirect google amp page
-
 function custom_excerpt_length( $length ) {
 	return 20;
 }
@@ -39,38 +19,6 @@ function custom_excerpt_more($more) {
 	return '';
 }
 add_filter('excerpt_more', 'custom_excerpt_more', 21 );
-
-function set_lazy_load_image($content){
-	$content = mb_convert_encoding($content, 'HTML-ENTITIES', "UTF-8");
-	$document = new DOMDocument();
-	libxml_use_internal_errors(true);
-	$document->loadHTML(utf8_decode($content));
-
-	$imgs = $document->getElementsByTagName('img');
-	foreach ($imgs as $img) {
-		if (isset($_GET['amp'])) {
-			$amp = $document->createElement("amp-img");
-			$amp->setAttribute('data-id',$img->getAttribute('data-id'));
-			$amp->setAttribute('alt',$img->getAttribute( 'alt' ));
-			$amp->setAttribute('src',$img->getAttribute( 'src' ));
-			$amp->setAttribute('height',250);
-			$amp->setAttribute('width',400);
-      $amp->setAttribute('layout', 'responsive');
-      $amp->setAttribute('srcset',$img->getAttribute( 'srcset' ));
-      $img->parentNode->replaceChild($amp, $img);
-		} else {
-			$img->setAttribute('data-id',$img->getAttribute('data-id'));
-			$img->setAttribute('class','lazy');
-			$img->setAttribute('data-src', $img->getAttribute('src'));
-			$img->setAttribute('data-srcset', $img->getAttribute('srcset'));
-			$img->setAttribute('src', get_default_image());
-			$img->removeAttribute('srcset');
-		}
-	}
-	$html = $document->saveHTML();
-	return $html;
-}
-add_filter('the_content', 'set_lazy_load_image');
 
 // get post view count
 function get_post_view() {
@@ -154,14 +102,48 @@ function get_first_image_in_post() {
 	return $first_img;
 }
 
-function filter_amp($content){
-	if (isset($_GET['amp'])) {
-		return preg_replace('/<iframe([^>]+)?>(.*?)<\/iframe>/', '<amp-iframe$1>$2</amp-iframe>', $content);
-	} else {
-		return $content;
+// for redirect google amp page
+define( 'AMP_QUERY_VAR', apply_filters( 'amp_query_var', 'amp' ) );
+add_rewrite_endpoint( AMP_QUERY_VAR, EP_PERMALINK | EP_PAGES );
+function prefix_url_rewrite() {
+	if( get_query_var( AMP_QUERY_VAR, false ) !== false ) {
+		if ( is_page() ) {
+      add_filter( 'template_include', function() {
+        return get_template_directory() . '/index-amp.php';
+      });
+		}
+		if ( is_single() ) {
+      add_filter( 'template_include', function() {
+        return get_template_directory() . '/single-amp.php';
+      });
+		}
 	}
 }
-add_filter('the_content', 'filter_amp');
+add_action( 'template_redirect', 'prefix_url_rewrite' );
+// /.for redirect google amp page
+
+function amp_filter($content){
+	$patterns = []; $patterns_non_amp = []; $replacements = []; $replacements_non_amp = [];
+
+	$patterns = [
+		'/<img ([^>]+)?>/',
+		'/<iframe([^>]+)?>(.*?)<\/iframe>/'
+	];
+	$replacements = [
+		'<amp-img $1 title="'.get_the_title().'" height=250 width=400 layout="responsive"></amp-img>',
+		'<amp-iframe$1>$2</amp-iframe>'
+	];
+
+	$patterns_non_amp = [ '/<img src="(.*?)" srcset="(.*?)" ([^>]+)?>/' ];
+	$replacements_non_amp = [ '<img src="'.get_default_image().'" alt="'.get_the_title().'" class="lazy image" data-id="" data-src="$1" data-srcset="$2" $3>' ];
+	
+	if (isset($_GET['amp'])) {
+		return preg_replace($patterns, $replacements, $content);
+	} else {
+		return preg_replace($patterns_non_amp, $replacements_non_amp, $content);
+	}
+}
+add_filter('the_content', 'amp_filter');
 
 // function get_id_attachment_by_url($url){
 // 	global $wpdb;
