@@ -126,11 +126,11 @@ function amp_filter($content){
 	$patterns = []; $patterns_non_amp = []; $replacements = []; $replacements_non_amp = [];
 
 	$patterns = [
-		'/<img ([^>]+)?>/',
+		'/<img loading="lazy" ([^>]+)?>/',
 		'/<iframe([^>]+)?>(.*?)<\/iframe>/'
 	];
 	$replacements = [
-		'<amp-img $1 title="'.get_the_title().'" height=250 width=400 layout="responsive"></amp-img>',
+		'<amp-img $1 layout="responsive"></amp-img>',
 		'<amp-iframe$1>$2</amp-iframe>'
 	];
 
