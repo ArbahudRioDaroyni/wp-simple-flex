@@ -3,6 +3,7 @@
 <?= $ampscript = (isset($_GET['amp'])) ? '<script async src="https://cdn.ampproject.org/v0.js"></script>' : '' ?>
 <?= $ampform = (isset($_GET['amp'])) ? '<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>' : '' ?>
 <?= $ampiframe = (isset($_GET['amp'])) ? '<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>' : '' ?>
+<?= $ampiframe = (isset($_GET['amp'])) ? '<script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>' : '' ?>
 <?= $ads = (isset($_GET['amp'])) ? '<script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>' : '<script data-ad-client="ca-pub-5419652163962979" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>' ?>
 
 <meta name="google-site-verification" content="1GS5b8XueaIk5rOTEhD8hwGXIfoZfAtK2KTCJlkJNDY" />

@@ -24,10 +24,12 @@ function amp_filter($content){
 
 	$patterns = [
 		'/<img loading="lazy" ([^>]+)?>/',
+		'/<script ([^>]+)?><\/script>/',
 		'/<iframe ([^>]+)? allow="([^>]+)?>(.*?)<\/iframe>/'
 	];
 	$replacements = [
 		'<amp-img $1 layout="responsive"></amp-img>',
+		'<amp-script layout="container" $1></amp-script>',
 		'<amp-iframe $1 sandbox="allow-scripts allow-same-origin" layout="responsive"></amp-iframe>'
 	];
 
