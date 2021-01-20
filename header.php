@@ -10,7 +10,9 @@
  * @since 1.0.0
  */
   
-?><!doctype html>
+?>
+<?php ob_start("minifier"); ?> 
+<!doctype html>
 <html <?= $a=(isset($_GET['amp']))?'amp':'' ?> <?php language_attributes(); ?>>
   <head>
     <?php get_template_part( 'template-parts/header/header', 'meta' ); ?>

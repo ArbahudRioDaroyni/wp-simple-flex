@@ -66,4 +66,6 @@
 <meta property="og:site_name" content="<?php bloginfo( 'name' ); ?>" />
 <meta name="twitter:card" content="summary_large_image" />
 
+<!-- start wp_head -->
 <?php wp_head(); ?>
+<!-- end wp_head -->

@@ -77,6 +77,26 @@ function get_first_image_in_post() {
 	return $first_img;
 }
 
+function minifier($code) { 
+	$search = array( 
+				
+			// Remove whitespaces after tags 
+			'/\>[^\S ]+/s', 
+				
+			// Remove whitespaces before tags 
+			'/[^\S ]+\</s', 
+				
+			// Remove multiple whitespace sequences 
+			'/(\s)+/s', 
+				
+			// Removes comments 
+			'/<!--(.|\s)*?-->/'
+	); 
+	$replace = array('>', '<', '\\1'); 
+	$code = preg_replace($search, $replace, $code); 
+	return $code; 
+}
+
 // function get_id_attachment_by_url($url){
 // 	global $wpdb;
 // 	$attachment = $wpdb->get_col($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE guid='%s';", $url )); 
