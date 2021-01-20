@@ -13,7 +13,7 @@
 ?>
 <?php ob_start("minifier"); ?> 
 <!doctype html>
-<html <?= $a=(isset($_GET['amp']))?'amp':'' ?> <?php language_attributes('id_ID'); ?>>
+<html <?= $a=(isset($_GET['amp']))?'amp':'' ?> <?= get_locale(); ?>>
   <head>
     <?php get_template_part( 'template-parts/header/header', 'meta' ); ?>
     <?= $url = (!isset($_GET['amp'])) ? '<link rel="amphtml" href="' . get_permalink() . '?amp" />' : '' ?>
