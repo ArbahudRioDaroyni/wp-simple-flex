@@ -29,7 +29,7 @@ function amp_filter($content){
 	];
 	$replacements = [
 		'<amp-img $1 layout="responsive"></amp-img>',
-		'<amp-script layout="container" $1></amp-script>',
+		'<amp-script width="300" height="100" $1></amp-script>',
 		'<amp-iframe $1 sandbox="allow-scripts allow-same-origin" layout="responsive"></amp-iframe>'
 	];
 
