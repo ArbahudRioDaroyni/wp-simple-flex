@@ -23,6 +23,7 @@
     <?php } ?>
   </head>
   <body>
+    <?= $ads = (isset($_GET['amp'])) ? '<amp-auto-ads type="adsense" data-ad-client="ca-pub-5419652163962979"></amp-auto-ads>' : '' ?>
     <header>
       <?php get_template_part( 'template-parts/header/header', 'navigation' ); ?>
     </header>
