@@ -13,7 +13,7 @@
 
 ?>
 <?php // echo $b=(isset($_GET['amp']))?'':'<link rel="stylesheet" media="screen" type="text/css" href="'.get_bloginfo( 'url' ).'/wp-content/themes/jejakcyber/assets/css/single-article.css?ver=1.1.3"/>' ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('section'); ?>>
 	<div class="container p-0">
 
 		<header class="entry-header p-set">
