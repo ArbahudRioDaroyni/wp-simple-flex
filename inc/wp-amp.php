@@ -24,12 +24,12 @@ function amp_filter($content){
 
 	$patterns = [
 		'/<img loading="lazy" ([^>]+)?>/',
-		'/<script ([^>]+)?><\/script>/',
+		'/<script data-name="gist" data-id="(.*?)" data-file="(.*?)" ([^>]+)?><\/script>/',
 		'/<iframe ([^>]+)? allow="([^>]+)?>(.*?)<\/iframe>/'
 	];
 	$replacements = [
 		'<amp-img $1 layout="responsive"></amp-img>',
-		'<amp-script width="300" height="100" $1></amp-script>',
+		'<amp-gist data-gistid="$1" data-file="$2" layout="fixed-height" height="185"></amp-gist>',
 		'<amp-iframe $1 sandbox="allow-scripts allow-same-origin" layout="responsive"></amp-iframe>'
 	];
 
