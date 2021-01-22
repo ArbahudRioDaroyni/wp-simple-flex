@@ -68,6 +68,7 @@
 		</div>
 	</div>
 </footer>
+<?php ob_end_flush(); ?>
 <?= $b=(isset($_GET['amp']))?'':
 '<script type="text/javascript" src="'.get_template_directory_uri().'/js/lazyload.js"></script>
 <script>
