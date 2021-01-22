@@ -29,3 +29,4 @@
     <header>
       <?php get_template_part( 'template-parts/header/header', 'navigation' ); ?>
     </header>
+<?php ob_end_flush(); ?>
