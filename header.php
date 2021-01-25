@@ -15,6 +15,9 @@
 <!doctype html>
 <html <?= $a=(isset($_GET['amp']))?'amp':'' ?> lang="<?= get_locale(); ?>">
   <head>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta charset="<?php bloginfo( 'charset' ); ?>" />
+    <meta name="google-site-verification" content="1GS5b8XueaIk5rOTEhD8hwGXIfoZfAtK2KTCJlkJNDY" />
     <?php get_template_part( 'template-parts/header/header', 'meta' ); ?>
     <?= $url = (!isset($_GET['amp'])) ? '<link rel="amphtml" href="' . get_permalink() . '?amp" />' : '' ?>
     <?php if(isset($_GET['amp'])){ ?>

@@ -44,11 +44,16 @@ function amp_filter($content){
 }
 add_filter('the_content', 'amp_filter');
 
-function wp_head_custom_amp($content){
+function wp_head_custom_amp(){
+	global $post, $posts;
 	// start code
-	// if (strpos($content, 'amp-gist') !== false) {
+	if (strpos($post->post_content, '<amp-gist') !== false) {
 		echo '<script async custom-element="amp-gist" src="https://cdn.ampproject.org/v0/amp-gist-0.1.js"></script>';
-	// }
+	} elseif (strpos($post->post_content, '<amp-iframe') !== false) {
+		echo '<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>';
+	} elseif (strpos($post->post_content, '<amp-form') !== false) {
+		echo '<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>';
+	}
 	// end code
 }
 add_action('wp_head', 'wp_head_custom_amp');
