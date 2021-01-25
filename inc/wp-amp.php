@@ -48,9 +48,9 @@ function wp_head_custom_amp(){
 	global $post, $posts;
 	// start code
 	if (strpos($post->post_content, 'data-name="gist"') !== false) {
-		echo $amp_gist = (isset($_GET['amp'])) ? '<script async custom-element="amp-gist" src="https://cdn.ampproject.org/v0/amp-gist-0.1.js"></script>' : '';
+		echo '<script async custom-element="amp-gist" src="https://cdn.ampproject.org/v0/amp-gist-0.1.js"></script>';
 	} elseif (strpos($post->post_content, 'iframe') !== false) {
-		echo $amp_iframe = (isset($_GET['amp'])) ? '<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>' : '';
+		echo '<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>';
 	}
 	
 	// end code
