@@ -15,7 +15,7 @@ function wp_head_custom_structured_data(){
 			"@type": "WebPage",
 			"@id": "<?= get_the_permalink() ?>",
 			"ulr": "<?= get_the_permalink() ?>",
-			"name": "<?= get_the_title() ?>",
+			"name": "<?= get_the_title() ?>"
 		},
 		"author": {
 			"@type": "Person",
