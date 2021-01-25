@@ -10,50 +10,52 @@
 
 <?php if (is_home() || is_front_page()){ ?>
 <meta name="description" content="<?php bloginfo( 'url' ); ?>, <?php bloginfo( 'description' ); ?> tentang website & mobile, SEO, review, desain grafis, dan UI UX." />
-<title><?php bloginfo( 'name' ); ?> : <?php bloginfo( 'description' ); ?></title>
-<meta property="og:title" content="<?php bloginfo( 'name' ); ?> : <?php bloginfo( 'description' ); ?>" />
-<meta name="twitter:title" content="<?php bloginfo( 'name' ); ?> : <?php bloginfo( 'description' ); ?>" />
+<title><?php bloginfo( 'description' ); ?> - <?php bloginfo( 'name' ); ?></title>
+<meta property="og:title" content="<?php bloginfo( 'description' ); ?> - <?php bloginfo( 'name' ); ?>" />
+<meta name="twitter:title" content="<?php bloginfo( 'description' ); ?> - <?php bloginfo( 'name' ); ?>" />
 <meta property="og:description" content="<?php bloginfo( 'url' ); ?>, <?php bloginfo( 'description' ); ?> tentang website & mobile, SEO, review, desain grafis, dan UI UX." />
 <meta name="twitter:description" content="<?php bloginfo( 'url' ); ?>, <?php bloginfo( 'description' ); ?> tentang website & mobile, SEO, review, desain grafis, dan UI UX." />
 
 <?php } elseif (is_single() || is_page()) { ?>
 <meta name="description" content="Temukan infomasi lengkap di <?php bloginfo( 'name' ); ?> tentang <?php single_post_title(); ?> - <?= wp_strip_all_tags( get_the_excerpt(), true ); ?>" />
-<title><?php bloginfo( 'name' ); ?> : <?php single_post_title(); ?></title>
-<meta property="og:title" content="<?php bloginfo( 'name' ); ?> : <?= single_post_title() ?>" />
-<meta name="twitter:title" content="<?php bloginfo( 'name' ); ?> : <?= single_post_title() ?>" />
+<title><?php single_post_title(); ?> - <?php bloginfo( 'name' ); ?></title>
+<meta property="og:title" content="<?= single_post_title() ?> - <?php bloginfo( 'name' ); ?>" />
+<meta name="twitter:title" content="<?= single_post_title() ?> - <?php bloginfo( 'name' ); ?>" />
 <meta property="og:description" content="Temukan infomasi lengkap di <?php bloginfo( 'name' ); ?> tentang <?php single_post_title(); ?> - <?= wp_strip_all_tags( get_the_excerpt(), true ); ?>" />
 <meta name="twitter:description" content="Temukan infomasi lengkap di <?php bloginfo( 'name' ); ?> tentang <?php single_post_title(); ?> - <?= wp_strip_all_tags( get_the_excerpt(), true ); ?>" />
 
 <?php } elseif (is_year() || is_day() || is_month()) { ?>
 <meta name="description" content="Temukan infomasi lengkap di <?php bloginfo( 'name' ); ?> pada <?php wp_title('', true, 'right'); ?> - <?= wp_strip_all_tags( get_the_excerpt(), true ); ?>" />
-<title><?php bloginfo( 'name' ); ?> : <?php single_post_title(); ?></title>
-<meta property="og:title" content="<?php bloginfo( 'name' ); ?> : <?= single_post_title() ?>" />
-<meta name="twitter:title" content="<?php bloginfo( 'name' ); ?> : <?= single_post_title() ?>" />
+<title><?php single_post_title(); ?> - <?php bloginfo( 'name' ); ?></title>
+<meta property="og:title" content="<?= single_post_title() ?> - <?php bloginfo( 'name' ); ?>" />
+<meta name="twitter:title" content="<?= single_post_title() ?> - <?php bloginfo( 'name' ); ?>" />
 <meta property="og:description" content="Temukan infomasi lengkap di <?php bloginfo( 'name' ); ?> pada <?php wp_title('', true, 'right'); ?> - <?= wp_strip_all_tags( get_the_excerpt(), true ); ?>" />
 <meta name="twitter:description" content="Temukan infomasi lengkap di <?php bloginfo( 'name' ); ?> pada <?php wp_title('', true, 'right'); ?> - <?= wp_strip_all_tags( get_the_excerpt(), true ); ?>" />
 
 <?php } elseif (is_tag()) { ?>
 <meta name="description" content="Temukan infomasi lengkap di <?php bloginfo( 'name' ); ?> tentang <?php wp_title('', true, 'right'); ?> - <?= wp_strip_all_tags( get_the_excerpt(), true ); ?>" />
-<title><?php bloginfo( 'name' ); ?> : <?php single_post_title(); ?></title>
-<meta property="og:title" content="<?php bloginfo( 'name' ); ?> : <?= single_post_title() ?>" />
-<meta name="twitter:title" content="<?php bloginfo( 'name' ); ?> : <?= single_post_title() ?>" />
+<title><?php single_post_title(); ?> - <?php bloginfo( 'name' ); ?></title>
+<meta property="og:title" content="<?= single_post_title() ?> - <?php bloginfo( 'name' ); ?>" />
+<meta name="twitter:title" content="<?= single_post_title() ?> - <?php bloginfo( 'name' ); ?>" />
 <meta property="og:description" content="Temukan infomasi lengkap di <?php bloginfo( 'name' ); ?> tentang <?php wp_title('', true, 'right'); ?> - <?= wp_strip_all_tags( get_the_excerpt(), true ); ?>" />
 <meta name="twitter:description" content="Temukan infomasi lengkap di <?php bloginfo( 'name' ); ?> tentang <?php wp_title('', true, 'right'); ?> - <?= wp_strip_all_tags( get_the_excerpt(), true ); ?>" />
 
 <?php } elseif (is_category()) { ?>
 <meta name="description" content="Temukan infomasi lengkap di <?php bloginfo( 'name' ); ?> tentang <?php single_cat_title(); ?> - <?= wp_strip_all_tags( get_the_excerpt(), true ); ?>" />
-<title><?php bloginfo( 'name' ); ?> : <?= get_the_category()[0]->name ?></title>
-<meta property="og:title" content="<?php bloginfo( 'name' ); ?> : <?= get_the_category()[0]->name ?>" />
-<meta name="twitter:title" content="<?php bloginfo( 'name' ); ?> : <?= get_the_category()[0]->name ?>" />
+<title><?= get_the_category()[0]->name ?> - <?php bloginfo( 'name' ); ?></title>
+<meta property="og:title" content="<?= get_the_category()[0]->name ?> - <?php bloginfo( 'name' ); ?>" />
+<meta name="twitter:title" content="<?= get_the_category()[0]->name ?> - <?php bloginfo( 'name' ); ?>" />
 <meta property="og:description" content="Temukan infomasi lengkap di <?php bloginfo( 'name' ); ?> tentang <?php single_cat_title(); ?> - <?= wp_strip_all_tags( get_the_excerpt(), true ); ?>" />
 <meta name="twitter:description" content="Temukan infomasi lengkap di <?php bloginfo( 'name' ); ?> tentang <?php single_cat_title(); ?> - <?= wp_strip_all_tags( get_the_excerpt(), true ); ?>" />
+
 <?php } elseif (is_search()) { ?>
 <meta name="description" content="Temukan infomasi lengkap di <?php bloginfo( 'name' ); ?> tentang <?php the_search_query(); ?>" />
-<title><?php bloginfo( 'name' ); ?> : <?php single_post_title(); ?></title>
-<meta property="og:title" content="<?php bloginfo( 'name' ); ?> : <?php single_post_title(); ?>" />
-<meta name="twitter:title" content="<?php bloginfo( 'name' ); ?> : <?php single_post_title(); ?>" />
+<title><?php single_post_title(); ?> - <?php bloginfo( 'name' ); ?></title>
+<meta property="og:title" content="<?php single_post_title(); ?> - <?php bloginfo( 'name' ); ?>" />
+<meta name="twitter:title" content="<?php single_post_title(); ?> - <?php bloginfo( 'name' ); ?>" />
 <meta property="og:description" content="Temukan infomasi lengkap di <?php bloginfo( 'name' ); ?> tentang <?php the_search_query(); ?>" />
 <meta name="twitter:description" content="Temukan infomasi lengkap di <?php bloginfo( 'name' ); ?> tentang <?php the_search_query(); ?>" />
+
 <?php } ?>
 <meta name='author' content='<?php bloginfo( 'name' ); ?>' />
 <meta name="keywords" content="It Support, Developer Website, Developer Mobile, SEO, Jasa SEO, UI UX, Review Google, Rating Google">

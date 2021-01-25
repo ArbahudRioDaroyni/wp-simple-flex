@@ -4,25 +4,28 @@ function wp_head_custom_structured_data(){
 	<script type="application/ld+json">
 	{
 		"@context": "https://schema.org",
-		"@type": "NewsArticle",
+		"@type": "BlogPosting",
 		"name": "<?= get_the_title() ?>",
-		"mainEntityOfPage": {
-			"@type": "WebPage",
-			"@id": "<?= get_the_permalink() ?>"
-		},
 		"headline": "<?= get_the_title() ?>",
-		"description":"<?php echo strip_tags( get_the_excerpt() ); ?>",
-		"image": "<?= get_first_image_in_post() ?>",
 		"datePublished": "<?php the_time('c'); ?>",
 		"dateModified": "<?php the_time('c'); ?>",
-		"articleSection": "<?= get_the_category()[0]->name ?>",
+		"description":"<?php echo strip_tags( get_the_excerpt() ); ?>",
+		"image": "<?= get_first_image_in_post() ?>",
+		"mainEntityOfPage": {
+			"@type": "WebPage",
+			"@id": "<?= get_the_permalink() ?>",
+			"ulr": "<?= get_the_permalink() ?>",
+			"name": "<?= get_the_title() ?>",
+		},
 		"author": {
 			"@type": "Person",
 			"name": "Roy"
 		},
+		"articleSection": "<?= get_the_category()[0]->name ?>",
 		"publisher": {
 			"@type": "Organization",
 			"name": "<?= get_bloginfo('name') ?>",
+			"description": "<?= get_bloginfo('description') ?>",
 			"logo": {
 				"@type": "ImageObject",
 				"url": "https://google.com/logo.jpg"
