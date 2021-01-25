@@ -47,7 +47,7 @@ add_filter('the_content', 'amp_filter');
 function wp_head_custom_amp($content){
 	// start code
 	// if (strpos($content, 'amp-gist') !== false) {
-		echo '<script async custom-element="amp-gist" src="https://cdn.ampproject.org/v0/amp-gist-0.1.js"></script>';
+		echo $content;
 	// }
 	// end code
 }
