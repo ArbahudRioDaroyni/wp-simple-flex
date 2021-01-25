@@ -54,6 +54,7 @@ function wp_head_custom_amp(){
 	} elseif (strpos($post->post_content, '<amp-form') !== false) {
 		echo '<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>';
 	}
+	
 	// end code
 }
 add_action('wp_head', 'wp_head_custom_amp');
