@@ -28,7 +28,7 @@ function wp_head_custom_structured_data(){
 			"description": "<?= get_bloginfo('description') ?>",
 			"logo": {
 				"@type": "ImageObject",
-				"url": "https://google.com/logo.jpg"
+				"url": "https://bandarcara.com/wp-content/uploads/2020/11/Bandarcara-Logo.png"
 			}
 		},
 		"url":"<?php the_permalink(); ?>",
