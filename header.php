@@ -11,7 +11,7 @@
  */
   
 ?>
-<?php ob_start("minifier"); ?> 
+<?php // ob_start("minifier"); ?> 
 <!doctype html>
 <html <?= $a=(isset($_GET['amp']))?'amp':'' ?> lang="<?= get_locale(); ?>">
   <head>
