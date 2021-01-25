@@ -47,7 +47,7 @@ add_filter('the_content', 'amp_filter');
 function wp_head_custom_amp($content){
 	// start code
 	// if (strpos($content, 'amp-gist') !== false) {
-		echo $content;
+		echo $content; 
 	// }
 	// end code
 }
