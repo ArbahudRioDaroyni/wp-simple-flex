@@ -28,7 +28,7 @@ function amp_filter($content){
 		'/<iframe ([^>]+)? allow="([^>]+)?>(.*?)<\/iframe>/'
 	];
 	$replacements = [
-		'<amp-img $1 layout="responsive"></amp-img>',
+		'<amp-img $1 layout="responsive" style="width: 100%;"></amp-img>',
 		'<amp-gist data-gistid="$1" data-file="$2" layout="fixed-height" height="185"></amp-gist>',
 		'<amp-iframe $1 sandbox="allow-scripts allow-same-origin" layout="responsive"></amp-iframe>'
 	];
@@ -47,13 +47,14 @@ add_filter('the_content', 'amp_filter');
 function wp_head_custom_amp(){
 	global $post, $posts;
 	// start code
-	if (strpos($post->post_content, 'data-name="gist"') !== false) {
-		echo '<script async custom-element="amp-gist" src="https://cdn.ampproject.org/v0/amp-gist-0.1.js"></script>';
+	if ( isset($_GET['amp']) ) {
+		if ( strpos($post->post_content, 'data-name="gist"') !== false ) {
+			echo '<script async custom-element="amp-gist" src="https://cdn.ampproject.org/v0/amp-gist-0.1.js"></script>';
+		}
+		if ( strpos($post->post_content, 'wp-block-embed') !== false ) {
+			echo '<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>';
+		}
 	}
-	if (strpos($post->post_content, 'wp-block-embed') !== false) {
-		echo '<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>';
-	}
-	
 	// end code
 }
 add_action('wp_head', 'wp_head_custom_amp');
