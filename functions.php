@@ -97,6 +97,15 @@ function minifier($code) {
 	return $code; 
 }
 
+function content_image_sizes_attr( $sizes, $size ) {
+	$width = $size[0].'px';
+
+	$sizes = "(max-width: $width) 100%, $width";
+
+	return $sizes;
+}
+add_filter( 'wp_calculate_image_sizes', 'content_image_sizes_attr', 10, 2 );
+
 // function get_id_attachment_by_url($url){
 // 	global $wpdb;
 // 	$attachment = $wpdb->get_col($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE guid='%s';", $url )); 
