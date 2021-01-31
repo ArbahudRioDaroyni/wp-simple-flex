@@ -100,7 +100,7 @@ function minifier($code) {
 function content_image_sizes_attr( $sizes, $size ) {
 	$width = $size[0].'px';
 
-	$sizes = "(max-width: $width) 100%, $width";
+	$sizes = "(max-width: $width) 100%";
 
 	return $sizes;
 }
