@@ -88,6 +88,9 @@
     }
     a {
       color: $secondary;
+      strong {
+        color: $secondary;
+      }
       &:hover {
         text-decoration: underline;
       }
