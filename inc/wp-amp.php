@@ -28,7 +28,7 @@ function amp_filter($content){
 		'/<iframe ([^>]+)? allow="([^>]+)?>(.*?)<\/iframe>/'
 	];
 	$replacements = [
-		'<amp-img $1 layout="responsive" style="width: 100%;"></amp-img>',
+		'<amp-img $1 layout="responsive"></amp-img>',
 		'<amp-gist data-gistid="$1" data-file="$2" layout="fixed-height" height="185"></amp-gist>',
 		'<amp-iframe $1 sandbox="allow-scripts allow-same-origin" layout="responsive"></amp-iframe>'
 	];

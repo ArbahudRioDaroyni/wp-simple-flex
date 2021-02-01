@@ -65,15 +65,20 @@
       padding-left: 2rem;
     }
     ol {
-      padding-left: 2rem;
+      padding-left: 1.1rem;
     }
     li, figcaption {
       letter-spacing: 0;
       line-height: 1.644;
       color: scale-color($black, $lightness: +40%);
-      text-align: left;
       font-size: 1rem;
       padding-left: .5rem;
+    }
+    li {
+      text-align: left;
+    }
+    figcaption {
+      text-align: center;
     }
     strong {
       font-weight: 500;
