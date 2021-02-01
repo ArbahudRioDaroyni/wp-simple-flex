@@ -1,0 +1,15 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+table, td, th {
+  border: 1px solid #ddd;
+  text-align: left;
+}
+th, td {
+  padding: 1rem;
+}
+tr:hover {
+  background-color: scale-color($secondary, $lightness: +10%);
+  transition: all .4s ease;
+}
