@@ -12,12 +12,12 @@
  */	
 
 ?>
-<section class="section">
+<section style="padding-top:9vh;">
   <?php $posts_array = get_list_posts(1, get_query_var('category_name'));
     foreach ( $posts_array as $post ) : setup_postdata( $post ); ?>
       <div class="row category-headline">
         <div class="full-width-7 pl-0">
-          <div class="ch-img"></div>
+          <div class="ch-img" style="background:url('<?= get_first_image_in_post() ?>')"></div>
         </div>
         <div class="full-width-5 ch-description">
           <a href="<?= esc_url( get_category_link( get_cat_ID( get_the_category()[0]->name ) ) ) ?>" class="ch-name">
@@ -73,9 +73,9 @@
     <?php $posts_array = get_list_posts(3, get_query_var('category_name'));
       foreach ( $posts_array as $post ) : setup_postdata( $post ); ?>
         <a href="<?= get_permalink() ?>" class="row">
-          <div class="full-width-10 pl-0">
+          <div class="full-width-10 pl-0 flex flex-center">
             <div class="cs-content">
-              <h4><?php the_time('d F'); ?> / Google.org</h4>
+              <h4><?php the_time('d F'); ?> / <?= get_the_tags()[0]->name ?></h4>
               <h3><?= get_the_title() ?></h3>
             </div>
           </div>
