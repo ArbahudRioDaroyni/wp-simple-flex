@@ -64,12 +64,16 @@
 			<ul class="mainmenu-blog g-menu" id="">
 				<li><a href="<?php get_home_url() ?> " class="active">Halaman Utama</a></li>
 				<li>
-					<a href="#" <?= $b=(isset($_GET['amp']))?'': 'onclick="toggleDropBox()"' ?> class="dropbtn flex">Pilihan Kategori 
+					<a href="#" <?= $b=(isset($_GET['amp']))?'': 'onclick="toggleDropBox()"' ?> class="dropbtn flex">Pilihan Tutorial 
 						<svg id="about" height="24" width="24">
 							<path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path>
 						</svg>
 					</a>
 				</li>
+				<li><a href="<?php get_home_url() ?>/game/" class="active">Game</a></li>
+				<li><a href="<?php get_home_url() ?>/aplikasi/" class="active">Aplikasi</a></li>
+				<li><a href="<?php get_home_url() ?>/film/" class="active">Film</a></li>
+				<li><a href="<?php get_home_url() ?>/lainnya/" class="active">Lainnya</a></li>
 				<!-- <li class="dropdown2">
 					<a href="#" class="">Company news <i class="fa fa-angle-down"></i></a>
 					<div id="" class="dropdown-content2">
@@ -102,17 +106,25 @@
 	<div id="drop-box" class="drop-box">
 		<section><a href="#" <?= $b=(isset($_GET['amp']))?'': 'onclick="toggleDropBox()"' ?>><i class="fa fa-angle-left"></i> &nbsp;Back</a></section>
 		<ul class="full-width-3">
-			<li>Review</li>
-			<li><a href="<?= get_home_url() ?>/game">Game</a></li>
-			<li><a href="<?= get_home_url() ?>/film">Film</a></li>
+			<?php 
+				// wp_list_categories( array(
+				// 	'orderby'							=> 'id',
+				// 	'use_desc_for_title'	=> false,
+				// 	'show_count'					=> 0,
+				// 	'title_li'						=> false,
+				// 	'child_of'						=> get_term_by( 'slug', 'coding', 'category')->term_id
+				// ) );
+			?>
+			<li>Coding</li>
+			<li><a href="<?= get_home_url() ?>/tutorial/coding/php/">PHP</a></li>
 		</ul>
 		<ul class="full-width-3">
-			<li>Tips & Trick</li>
-			<li><a href="<?= get_home_url() ?>/tips-trik/tutorial/">Tutorial</a></li>
+			<li>Hack</li>
+			<li><a href="<?= get_home_url() ?>/tutorial/hack/wifi/">WIFI</a></li>
 		</ul>
 		<ul class="full-width-3">
-			<li>Out of IT</li>
-			<!-- <li><a href="#">CoVid-19</a></li> -->
+			<li>Platform</li>
+			<li><a href="<?= get_home_url() ?>/tutorial/platform/android/">Android</a></li>
 		</ul>
 		<!-- <a href="#" class="full-width-12">Lorem ipsum, dolor sit amet consectetur.</a> -->
 		<section <?= $b=(isset($_GET['amp']))?'': 'onclick="toggleSide(1)"' ?> id="close-side"></section>
