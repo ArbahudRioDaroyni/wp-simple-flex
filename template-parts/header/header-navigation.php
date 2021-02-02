@@ -70,10 +70,10 @@
 						</svg>
 					</a>
 				</li>
-				<li><a href="<?php get_home_url() ?>/game/" class="active">Game</a></li>
-				<li><a href="<?php get_home_url() ?>/aplikasi/" class="active">Aplikasi</a></li>
-				<li><a href="<?php get_home_url() ?>/film/" class="active">Film</a></li>
-				<li><a href="<?php get_home_url() ?>/lainnya/" class="active">Lainnya</a></li>
+				<li><a href="<?php get_home_url() ?>/game/">Game</a></li>
+				<li><a href="<?php get_home_url() ?>/aplikasi/">Aplikasi</a></li>
+				<li><a href="<?php get_home_url() ?>/film/">Film</a></li>
+				<li><a href="<?php get_home_url() ?>/lainnya/">Lainnya</a></li>
 				<!-- <li class="dropdown2">
 					<a href="#" class="">Company news <i class="fa fa-angle-down"></i></a>
 					<div id="" class="dropdown-content2">
