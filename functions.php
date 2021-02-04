@@ -104,8 +104,9 @@ function minifier($code) {
 
 // 	return $sizes;
 // }
-add_filter( 'wp_calculate_image_sizes', 'content_image_sizes_attr', 10, 2 );
+// add_filter( 'wp_calculate_image_sizes', 'content_image_sizes_attr', 10, 2 );
 
+add_filter( 'image_send_to_editor', 'remove_image_size_attributes' );
 
 // function get_id_attachment_by_url($url){
 // 	global $wpdb;
