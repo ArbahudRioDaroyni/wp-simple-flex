@@ -62,7 +62,7 @@
 		</div>
 		<div class="navbar-menu md-none flex-center" id="topside">
 			<ul class="mainmenu-blog g-menu" id="">
-				<li><a href="<?php get_home_url() ?> " class="active">Halaman Utama</a></li>
+				<li><a href="<?= get_home_url() ?> " class="active">Halaman Utama</a></li>
 				<li>
 					<a href="#" <?= $b=(isset($_GET['amp']))?'': 'onclick="toggleDropBox()"' ?> class="dropbtn flex">Pilihan Tutorial 
 						<svg id="about" height="24" width="24">
@@ -70,10 +70,10 @@
 						</svg>
 					</a>
 				</li>
-				<li><a href="<?php get_home_url() ?>/game/">Game</a></li>
-				<li><a href="<?php get_home_url() ?>/aplikasi/">Aplikasi</a></li>
-				<li><a href="<?php get_home_url() ?>/film/">Film</a></li>
-				<li><a href="<?php get_home_url() ?>/lainnya/">Lainnya</a></li>
+				<li><a href="<?= get_home_url() ?>/game/">Game</a></li>
+				<li><a href="<?= get_home_url() ?>/aplikasi/">Aplikasi</a></li>
+				<li><a href="<?= get_home_url() ?>/film/">Film</a></li>
+				<li><a href="<?= get_home_url() ?>/lainnya/">Lainnya</a></li>
 				<!-- <li class="dropdown2">
 					<a href="#" class="">Company news <i class="fa fa-angle-down"></i></a>
 					<div id="" class="dropdown-content2">

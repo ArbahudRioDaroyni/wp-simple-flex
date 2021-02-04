@@ -8,7 +8,7 @@ remove_action('wp_print_styles', 'print_emoji_styles');
 function wpassist_remove_block_library_css(){
   wp_dequeue_style( 'wp-block-library' );
 } 
-add_action( 'wp_enqueue_scripts', 'wpassist_remove_block_library_css' );
+// add_action( 'wp_enqueue_scripts', 'wpassist_remove_block_library_css' );
 
 function custom_excerpt_length( $length ) {
 	return 20;
@@ -97,14 +97,15 @@ function minifier($code) {
 	return $code; 
 }
 
-function content_image_sizes_attr( $sizes, $size ) {
-	$width = $size[0].'px';
+// function content_image_sizes_attr( $sizes, $size ) {
+// 	$width = $size[0].'px';
 
-	$sizes = "(max-width: $width) 100%";
+// 	$sizes = "(max-width: $width) 100%";
 
-	return $sizes;
-}
+// 	return $sizes;
+// }
 add_filter( 'wp_calculate_image_sizes', 'content_image_sizes_attr', 10, 2 );
+
 
 // function get_id_attachment_by_url($url){
 // 	global $wpdb;
@@ -120,7 +121,7 @@ add_filter( 'wp_calculate_image_sizes', 'content_image_sizes_attr', 10, 2 );
 // 	return $image = ($img == NULL) ? get_first_image_in_post() : $img;
 // }
 
-require_once( get_template_directory() . '/inc/activate-view-column-in-post-admin.php' );
+require_once( get_template_directory() . '/inc/register-view-count-report.php' );
 
 require_once( get_template_directory() . '/inc/wp-amp.php' );
 

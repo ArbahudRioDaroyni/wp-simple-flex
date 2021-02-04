@@ -44,7 +44,7 @@
   <?php endforeach; wp_reset_postdata();?>
 </section>
 
-<section class="section">
+<section>
   <div class="row">
     <?php $posts_array = get_list_posts(3, get_query_var('category_name'), null, 1);
       foreach ( $posts_array as $post ) : setup_postdata( $post ); ?>
@@ -67,7 +67,7 @@
   </div>
 </section>
 
-<section class="section">
+<section>
   <div class="category-story">
     <h2>Semua di <?= get_query_var('category_name')?></h2>
     <?php $posts_array = get_list_posts(3, get_query_var('category_name'));

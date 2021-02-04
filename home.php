@@ -25,7 +25,7 @@ get_header();
               <hr class="h-line">
               <div class="row">
                 <div class="full-width-5">
-                  <?php $posts_array = get_list_popular_posts(1);
+                  <?php $posts_array = get_list_posts(1);
                     foreach ( $posts_array as $post ) : setup_postdata( $post ); ?>
                       <a href="<?= get_the_permalink() ?>" class="f-pst">
                         <figure>
@@ -44,7 +44,7 @@ get_header();
                   <?php endforeach; wp_reset_postdata();?>
                 </div>
                 <div class="full-width-7">
-                  <?php $posts_array = get_list_popular_posts(3, 1);
+                  <?php $posts_array = get_list_posts(3, null, null, 1);
                   foreach ( $posts_array as $post ) : setup_postdata( $post ); ?>
                     <a href="<?= get_the_permalink() ?>" class="f-lst">
                       <div class="f-lst-box">
@@ -69,9 +69,9 @@ get_header();
           </div>
           <div class="full-width-3">
             <div class="tranding">
-              <h2 class="trd-h">Cerita terbaru</h2>
+              <h2 class="trd-h">Tranding</h2>
               <hr class="h-line mb-1">
-              <?php $posts_array = get_list_posts(4);
+              <?php $posts_array = get_list_popular_posts(4);
                $i=1;
                 foreach ( $posts_array as $post ) : setup_postdata( $post ); ?>
                   <a href="<?= get_the_permalink() ?>" class="trd-box flex-full-center">
