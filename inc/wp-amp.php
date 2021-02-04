@@ -33,8 +33,8 @@ function amp_filter($content){
 		'<amp-iframe $1 sandbox="allow-scripts allow-same-origin" layout="responsive"></amp-iframe>'
 	];
 
-	$patterns_non_amp = [ '/<img src="(.*?)" srcset="(.*?)" ([^>]+)?>/' ];
-	$replacements_non_amp = [ '<img src="'.get_default_image().'" alt="'.get_the_title().'" class="lazy image" data-id="" data-src="$1" data-srcset="$2" $3>' ];
+	$patterns_non_amp = [ '/<img ([^>]+)? src="(.*?)" ([^>]+)? class="(.*?)" srcset="(.*?)" ([^>]+)?>/' ];
+	$replacements_non_amp = [ '<img $1 src="'.get_default_image().'" $3 class="lazy image $4" data-id="" data-src="$2" data-srcset="$5" $6>' ];
 	
 	if (isset($_GET['amp'])) {
 		return preg_replace($patterns, $replacements, $content);
