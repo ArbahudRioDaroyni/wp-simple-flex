@@ -17,7 +17,7 @@
     foreach ( $posts_array as $post ) : setup_postdata( $post ); ?>
       <div class="row category-headline">
         <div class="full-width-7 pl-0">
-          <div class="ch-img" style="background:url('<?= get_first_image_in_post() ?>')"></div>
+          <div class="ch-img" style="background:url('<?= get_first_image_in_post() ?>'); background-repeat: no-repeat; background-position: 50%; background-size: cover;"></div>
         </div>
         <div class="full-width-5 ch-description">
           <a href="<?= esc_url( get_category_link( get_cat_ID( get_the_category()[0]->name ) ) ) ?>" class="ch-name">

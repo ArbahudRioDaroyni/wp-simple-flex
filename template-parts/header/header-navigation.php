@@ -27,7 +27,7 @@
 				<?php if (isset($_GET['amp'])) { ?>
 					<amp-img src="https://bandarcara.com/wp-content/uploads/2020/11/Bandarcara-Logo.png" height='33' width='78' alt="BandarCara" class="flex"></amp-img>
 				<?php }else{ ?>
-					<img src="<?= get_default_image() ?>" data-src="https://bandarcara.com/wp-content/uploads/2020/11/Bandarcara-Logo.png" data-srcset="https://bandarcara.com/wp-content/uploads/2020/11/Bandarcara-Logo.png 1x, https://bandarcara.com/wp-content/uploads/2020/11/Bandarcara-Logo.png 2x" class="lazy flex" alt="<?= get_the_title() ?>" />
+					<img src="https://bandarcara.com/wp-content/uploads/2020/11/Bandarcara-Logo.png" class="flex" alt="<?= get_the_title() ?>" />
 				<?php } ?>
 			</figure>
 		</a>

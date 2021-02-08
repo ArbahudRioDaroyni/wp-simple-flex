@@ -41,17 +41,26 @@
 				<time class="entry-date updated a-publish" datetime="<?php the_time('Y-m-d H:i'); ?>"><?php the_time('D, d F Y'); ?></time>
 			</div>
 
-			<div class="entry-content rich-text full-width-7">
-				<?php the_content(); ?>
+			<div class="full-width-7">
+				<div class="entry-content rich-text">
+					
+					<?php the_content(); ?>
+
+					<footer class="entry-footer flex a-footer">
+						<ul class="list-tag flex">
+							<?php foreach (get_the_tags() as $value) { ?>
+								<li>
+									#<a href="<?= esc_url( get_tag_link( $value ) ) ?>" rel="tag" class="tag"><?= $value->name ?></a>
+								</li>
+							<?php } ?>
+						</ul>
+					</footer><!-- .entry-footer -->
+
+				</div>
 			</div>
 
+			
 			<?php get_sidebar() ?>
-
-			<footer class="entry-footer flex a-footer">
-				<?php foreach (get_the_tags() as $value) { ?>
-					#<a href="<?= esc_url( get_tag_link( $value ) ) ?>" rel="tag" class="tag"><?= $value->name ?></a>
-				<?php } ?>
-			</footer><!-- .entry-footer -->
 
 		</div>
 

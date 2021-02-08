@@ -8,7 +8,7 @@ remove_action('wp_print_styles', 'print_emoji_styles');
 function wpassist_remove_block_library_css(){
   wp_dequeue_style( 'wp-block-library' );
 } 
-// add_action( 'wp_enqueue_scripts', 'wpassist_remove_block_library_css' );
+add_action( 'wp_enqueue_scripts', 'wpassist_remove_block_library_css' );
 
 function custom_excerpt_length( $length ) {
 	return 20;
@@ -70,6 +70,19 @@ function get_first_image_in_post() {
 	ob_end_clean();
 	$output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
 	$first_img = $matches [1] [0];
+	
+	if(empty($first_img)){
+		$first_img = get_default_image();
+	}
+	return $first_img;
+}
+function p() {
+	global $post, $posts;
+	$first_img = '';
+	ob_start();
+	ob_end_clean();
+	$output = preg_match_all('/<img([^>]+)?>/', $post->post_content, $matches);
+	$first_img = $matches;
 	
 	if(empty($first_img)){
 		$first_img = get_default_image();
