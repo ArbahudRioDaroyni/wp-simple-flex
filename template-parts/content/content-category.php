@@ -70,7 +70,7 @@
 <section>
   <div class="category-story">
     <h2>Semua di <?= get_query_var('category_name')?></h2>
-    <?php $posts_array = get_list_posts(3, get_query_var('category_name'));
+    <?php $posts_array = get_list_posts(7, get_query_var('category_name'));
       foreach ( $posts_array as $post ) : setup_postdata( $post ); ?>
         <a href="<?= get_permalink() ?>" class="row">
           <div class="full-width-10 pl-0 flex flex-center">
