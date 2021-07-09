@@ -120,8 +120,8 @@
 		</ul>
 		<ul class="full-width-3">
 			<li>Hack</li>
-			<li><a href="<?= get_home_url() ?>/tutorial/hack/game/">Game</a></li>
-			<li><a href="<?= get_home_url() ?>/tutorial/hack/lainnya/">Lainnya</a></li>
+			<li><a href="<?= get_home_url() ?>/tutorial/hack/game-hack/">Game</a></li>
+			<li><a href="<?= get_home_url() ?>/tutorial/hack/lainnya-hack/">Lainnya</a></li>
 		</ul>
 		<ul class="full-width-3">
 			<li>Platform</li>
