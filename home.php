@@ -39,7 +39,7 @@ get_header();
                         <p class="f-pst-content"><?= get_the_excerpt() ?></p>
                         <p class="f-pst-meta"><span class="f-pst-author"><?= get_the_author(); ?></span> in <span class="f-pst-category"><?= get_the_category()[0]->name ?></span></p>
                         <time class="f-pst-footer" datetime="<?php the_time('Y-m-d H:i'); ?>"><?php the_time('D, d F Y'); ?></time>
-                        <a class="btn btn-outline mt-1 mb-1" href="<?= esc_url( get_category_link( get_cat_ID( get_the_category()[0]->name ) ) ) ?>">Tampilkan Selengkapnya</a>
+                        <a class="btn btn-outline mt-1 mb-1" href="<?= esc_url( get_category_link( get_cat_ID( get_the_category_children()[0]->name ) ) ) ?>">Tampilkan Selengkapnya</a>
                       </a>
                   <?php endforeach; wp_reset_postdata();?>
                 </div>
