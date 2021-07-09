@@ -90,31 +90,6 @@ function p() {
 	return $first_img;
 }
 
-function get_the_category_children()
-{
-	$categories = get_the_category();
-	if ( ! empty($categories) ) {
-		$parents = array();
-		$children = array();
-		foreach( get_the_category() as $cat ) {
-			if ( $cat->parent == 0 ) {
-				$parents[] = $cat;
-			} else {
-				$children[] = $cat;
-			}
-		}
-		$toshow = ! empty($children) ? $children : $parents;
-		$sep = '';
-		if ( ! empty($toshow) ) { foreach( $toshow as $cat ) {
-			echo $sep;
-			echo '<span class="' . $cat->name .'">';
-			echo '<a href="' . get_category_link($cat->term_id) . '">' . $cat->name . '</a></span>';
-			$sep = ' / ';
-		} }
-	}
-	return $categories;
-}
-
 function minifier($code) { 
 	$search = array( 
 				
